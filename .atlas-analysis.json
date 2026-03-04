@@ -1,0 +1,91 @@
+{
+  "projectType": "api-service",
+  "projectName": "Lantern",
+  "projectDescription": "Real-time Discord presence tracking and broadcasting through RESTful API and WebSocket connections.",
+  "theme": "palm",
+  "primaryColor": "#5c64f4",
+  "lightColor": "#acb4fc",
+  "darkColor": "#ffffff",
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Documentation",
+        "groups": [
+          {
+            "group": "Get Started",
+            "pages": [
+              "introduction",
+              "quickstart"
+            ]
+          },
+          {
+            "group": "Guides",
+            "pages": [
+              "guides/authentication",
+              "guides/websocket-connection",
+              "guides/kv-storage",
+              "guides/svg-cards"
+            ]
+          },
+          {
+            "group": "Self-Hosting",
+            "pages": [
+              "self-hosting/setup",
+              "self-hosting/configuration",
+              "self-hosting/deployment"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "API Reference",
+        "groups": [
+          {
+            "group": "REST API",
+            "pages": [
+              "api-reference/rest/overview",
+              "api-reference/rest/get-users",
+              "api-reference/rest/get-user",
+              "api-reference/rest/storage"
+            ]
+          },
+          {
+            "group": "WebSocket",
+            "pages": [
+              "api-reference/websocket/overview",
+              "api-reference/websocket/opcodes",
+              "api-reference/websocket/events"
+            ]
+          },
+          {
+            "group": "Reference",
+            "pages": [
+              "api-reference/data-models",
+              "api-reference/errors",
+              "api-reference/rate-limits"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "keyFeatures": [
+    "Real-time Discord presence tracking via REST API",
+    "WebSocket support for live presence updates",
+    "Spotify integration showing current playing tracks",
+    "Key-value storage system for dynamic data",
+    "SVG card generation for user profiles",
+    "Discord bot integration for easy setup"
+  ],
+  "publicApiSurface": [
+    "GET /api/v1/users",
+    "GET /api/v1/users/:id",
+    "GET /api/v1/users/:id/storage",
+    "GET /api/v1/users/:id/storage/:key",
+    "PUT /api/v1/users/:id/storage/:key",
+    "PATCH /api/v1/users/:id/storage/:key",
+    "DELETE /api/v1/users/:id/storage/:key",
+    "DELETE /api/v1/users/:id/storage",
+    "WebSocket wss://lantern.rest/socket"
+  ]
+}
